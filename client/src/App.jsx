@@ -1,8 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 import { ArticulosPage } from './pages/ArticulosPage';
+import { ArticulosImportExcelPage } from './pages/ArticulosImportExcelPage';
 import { ArticuloFormPage } from './pages/ArticuloFormPage';
 import { Navigation } from "./components/Navigation";
-import { Toaster } from "react-hot-toast";
+import Excel from './components/Excel';
+
 
 function App() {
   return (
@@ -14,6 +17,7 @@ function App() {
             <Route path="/" element={<Navigate to="/articulos"/>} />
             <Route path="/articulos/" element={<ArticulosPage/>} />
             <Route path="/articulos-create/" element={<ArticuloFormPage/>} />
+            <Route path="/articulos-import/" element={<ArticulosImportExcelPage/>} />
             <Route path="/articulos/:id" element={<ArticuloFormPage/>} />
           </Routes>
           <Toaster/>

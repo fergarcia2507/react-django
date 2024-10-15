@@ -14,7 +14,7 @@ export function ArticulosList() {
     }, []);
 
     return (
-        <div className="grid grid-cols-2 gap-2 p-5" >
+        <div className="grid grid-cols-1 gap-2 p-5 max-w-xl m-auto" >
             {articulos.map(articulo => (
                 <ArticulosCard key={articulo.id} articulo={articulo} />
             ))}

@@ -5,14 +5,16 @@ export function ArticulosCard({articulo}) {
     const navigate = useNavigate()
     return (
         <div
-        className="bg-zingc-800 p-3 hover:bg-zinc-700 hover:corsor-pointer border-2 rounded-lg border-zinc-700"
+        className="bg-zinc-700 p-3 hover:bg-zinc-800 hover:corsor-pointer border-2 rounded-lg border-zinc-700"
             onClick={() => {
                     navigate(`/articulos/${articulo.id }`)
             }}
         >
-            <h1 className="font-bold">{articulo.descripcion}</h1>
-            <p className="text-zinc-400">Codigo: {articulo.codigo}</p>
+            <div className="w-full flex  justify-between">
+            <p className="text-zinc-400">Cod: {articulo.codigo}</p>
+            <p className="font-bold">{articulo.descripcion}</p>
             <p className="text-zinc-200">$ {articulo.precio}</p>
+            </div>
         </div>
     );
 }
