@@ -17,6 +17,11 @@ export function Navigation() {
                     <div className="text-sm"> Importar Excel</div>
                 </Link>
             </button>
+            <button className="bg-zinc-800 hover:bg-zinc-900 px-4 py-2 rounded-lg justify-end mx-1 hover:corsor-pointer">
+                <Link to="/articulos-export/">
+                    <div className="text-sm"> Exportar Excel</div>
+                </Link>
+            </button>
             </div>
         </div>
     );
